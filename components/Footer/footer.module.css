@@ -1,0 +1,16 @@
+.footer {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.footer:hover {
+  opacity: 80%;
+  transition-duration: 300ms;
+  cursor: pointer;
+}

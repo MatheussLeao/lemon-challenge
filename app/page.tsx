@@ -1,95 +1,44 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client"
+import React from "react";
+import Image from "next/image";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Dialog } from "@/components/shared/Dialog";
+import { Button } from "@/components/shared/Button";
+import styles from "./page.module.css";
 
 export default function Home() {
+  const [open, setOpen] = React.useState(false);
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <>
+      <Header />
+      <main className={styles.main}>
+        <Button
+          label="Open Dialog"
+          onClick={() => setOpen(true)}
         />
-      </div>
+      </main>
+      <Footer />
+      <Dialog
+        title="Titulo"
+        isOpen={open}
+        onClose={() => setOpen(!open)}
+        closeOnOverlayClick
+      >
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "2rem",
+          alignItems: "center"
+        }}>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis mattis consectetur. Cras at nulla sem. Pellentesque lacinia porta ultricies. Phasellus sodales elit vel nibh blandit, non dictum lacus aliquam. Phasellus feugiat arcu quis urna commodo lobortis. Nunc non neque venenatis, posuere enim vel, rhoncus turpis. Suspendisse vestibulum ac tortor at scelerisque. Etiam placerat, erat efficitur commodo mollis, ipsum neque lobortis purus, vel tempus nisi mauris quis diam. Mauris dictum libero elementum, mollis felis et, tristique mi.
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            In posuere accumsan diam ac egestas. Maecenas bibendum arcu laoreet suscipit interdum. Sed semper scelerisque lectus, vitae suscipit arcu dapibus ut. Fusce sit amet libero sollicitudin, consequat massa non, rutrum erat. Aliquam ut arcu iaculis felis suscipit maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod elit ac ex laoreet aliquet. In porta, metus quis tincidunt semper, turpis massa tempor nisi, id rutrum tortor metus et tortor. Nullam vitae libero lorem. Donec gravida a tortor eget ullamcorper. Morbi lobortis posuere massa id accumsan.
+          </span>
+          <Image src="/equipe.jpg" width={350} height={300} alt="Equipe" />
+        </div>
+      </Dialog>
+    </>
   )
 }
