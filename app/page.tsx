@@ -36,7 +36,7 @@ export default function Home() {
 
             In posuere accumsan diam ac egestas. Maecenas bibendum arcu laoreet suscipit interdum. Sed semper scelerisque lectus, vitae suscipit arcu dapibus ut. Fusce sit amet libero sollicitudin, consequat massa non, rutrum erat. Aliquam ut arcu iaculis felis suscipit maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod elit ac ex laoreet aliquet. In porta, metus quis tincidunt semper, turpis massa tempor nisi, id rutrum tortor metus et tortor. Nullam vitae libero lorem. Donec gravida a tortor eget ullamcorper. Morbi lobortis posuere massa id accumsan.
           </span>
-          <Image src="/equipe.jpg" width={350} height={300} alt="Equipe" />
+          <Image src="https://img.freepik.com/fotos-premium/pessoas-sorridentes-em-uma-sessao-de-terapia-de-grupo_23-2148752038.jpg?w=2000" width={350} height={300} alt="Equipe" />
         </div>
       </Dialog>
     </>
